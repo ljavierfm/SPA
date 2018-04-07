@@ -7,8 +7,12 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { AboutComponent } from './components/about/about.component';
+import { HeroComponent } from './components/hero/hero.component';
+
 
 import { APP_ROUTING } from './app.routes';
+
+import { HeroesSevice } from './services/heroes.service';
 
 
 
@@ -18,13 +22,14 @@ import { APP_ROUTING } from './app.routes';
     NavbarComponent,
     HomeComponent,
     HeroesComponent,
-    AboutComponent
+    AboutComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [HeroesSevice],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
